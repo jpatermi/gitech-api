@@ -13,7 +13,7 @@ class Company extends FormRequest
      */
     public function authorize()
     {
-        return true; // Se cambia a true para que activar la validacion
+        return true; // Se cambia a true para activar la validacion
     }
 
     /**
@@ -23,12 +23,25 @@ class Company extends FormRequest
      */
     public function rules()
     {
+        //dd($this->addresses);
+
         return [
+            'business_area_id'  => ['required'],
+            'type'              => ['required'],
             'social_reason'     => ['required'],
             'tradename'         => ['required'],
-            'business_area_id'  => ['required'],
+            'user_id'           => ['required'],
             'nif'               => ['required'],
-
+            /* Address */
+            'addresses.city_id'     => ['required'],
+            'addresses.description' => ['required'],
+            'addresses.number'      => ['required'],
+            'addresses.portal'      => ['required'],
+            'addresses.floor'       => ['required'],
+            'addresses.zip'         => ['required'],
+            /* Phones */
+            'phones.type'   => ['required'],
+            'phones.number' => ['required'],
         ];
     }
 }

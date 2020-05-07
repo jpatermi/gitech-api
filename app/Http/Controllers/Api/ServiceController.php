@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\CompanyService;
+use App\Service;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class CompanyServiceController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class CompanyServiceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\CompanyService  $companyService
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(CompanyService $companyService)
+    public function show(Service $service)
     {
         //
     }
@@ -43,10 +44,10 @@ class CompanyServiceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\CompanyService  $companyService
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CompanyService $companyService)
+    public function update(Request $request, Service $service)
     {
         //
     }
@@ -54,10 +55,10 @@ class CompanyServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\CompanyService  $companyService
+     * @param  \App\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function destroy(CompanyService $companyService)
+    public function destroy(Service $service)
     {
         //
     }

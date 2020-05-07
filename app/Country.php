@@ -7,10 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Country extends Model
 {
     /**
-    * Se obtienen todas las Ciudades de un Pais.
+    * Se obtienen todas las Provincias de un Pais.
     */
-    public function cities()
+    public function provinces()
     {
-        return $this->hasMany('App\City');
+        return $this->hasMany('App\Province');
+    }
+
+    /**
+    * Se obtiene el Usuario que creó este País.
+    */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

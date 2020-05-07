@@ -7,18 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 class Province extends Model
 {
     /**
-    * Se obtienen todas las Direcciones que tiene una Provincia.
+    * Se obtienen todas las Ciudades que tiene una Provincia.
     */
-    public function addresses()
+    public function cities()
     {
-        return $this->hasMany('App\Address');
+        return $this->hasMany('App\City');
     }
 
     /**
-    * Se obtiene la Ciudad a la que pertenece la Provincia.
+    * Se obtiene el País al que pertenece la Provincia.
     */
-    public function city()
+    public function country()
     {
-        return $this->belongsTo('App\City');
+        return $this->belongsTo('App\Country');
+    }
+
+    /**
+    * Se obtiene el Usuario que creó esta Provincia.
+    */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

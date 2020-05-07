@@ -7,10 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
     /**
-    * Se obtienen los Users de la Cuenta Contable.
+    * Se obtienen las Compañías de la Cuenta Contable.
     */
-    public function users()
+    public function companies()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\Company');
+    }
+
+    /**
+    * Se obtiene el Usuario que creó esta Cuenta.
+    */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

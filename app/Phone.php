@@ -7,7 +7,27 @@ use Illuminate\Database\Eloquent\Model;
 class Phone extends Model
 {
     /**
-    * Se obtiene el Usuario al que pertenece el Teléfono.
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'company_id',
+        'type',
+        'number',
+        'user_id',
+    ];
+
+    /**
+    * Se obtiene la Compañía a la que pertenece el Teléfono.
+    */
+    public function company()
+    {
+        return $this->belongsTo('App\Company');
+    }
+
+    /**
+    * Se obtiene el Usuario que creó este Teléfono.
     */
     public function user()
     {

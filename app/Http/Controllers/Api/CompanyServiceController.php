@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Partner;
+use App\CompanyService;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class PartnerController extends Controller
+class CompanyServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class PartnerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Partner  $partner
+     * @param  \App\CompanyService  $companyService
      * @return \Illuminate\Http\Response
      */
-    public function show(Partner $partner)
+    public function show(CompanyService $companyService)
     {
         //
     }
@@ -43,10 +44,10 @@ class PartnerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Partner  $partner
+     * @param  \App\CompanyService  $companyService
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Partner $partner)
+    public function update(Request $request, CompanyService $companyService)
     {
         //
     }
@@ -54,10 +55,10 @@ class PartnerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Partner  $partner
+     * @param  \App\CompanyService  $companyService
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partner $partner)
+    public function destroy(CompanyService $companyService)
     {
         //
     }

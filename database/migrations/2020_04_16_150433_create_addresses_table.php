@@ -16,6 +16,7 @@ class CreateAddressesTable extends Migration
         Schema::create('addresses', function (Blueprint $table) {
             $table->id()->comment('Id del registro');
             $table->foreignId('city_id')->constrained()->comment('Id de la Ciudad');
+            $table->foreignId('company_id')->constrained()->comment('Id de la Compañía');
             $table->string('description')->comment('Desripción de la dirección');
             $table->string('number', 10)->comment('Numero de Bloque');
             $table->string('portal', 10)->comment('Portal de Apartamentoto');

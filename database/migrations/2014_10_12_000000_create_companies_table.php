@@ -15,8 +15,8 @@ class CreateCompaniesTable extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id()->comment('Id del registro');
-            $table->enum('type', ['A', 'S'])->comment('Tipo de Compañía: Autónomo o Sociedad');
             $table->foreignId('business_area_id')->constrained()->comment('Id del Area de Negocio');
+            $table->enum('type', ['A', 'S'])->comment('Tipo de Compañía: Autónomo o Sociedad');
             $table->string('social_reason')->comment('Nombre de la Sociedad');
             $table->string('tradename')->comment('Nombre Comercial');
             $table->string('nif')->comment('Número de Identificación Fiscal');

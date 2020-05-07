@@ -11,7 +11,7 @@ class ProviderClient extends Model
     */
     public function client()
     {
-        return $this->belongsTo('App\User', 'user_client_id');
+        return $this->belongsTo('App\Company', 'company_client_id');
     }
 
     /**
@@ -19,6 +19,6 @@ class ProviderClient extends Model
     */
     public function provider()
     {
-        return $this->belongsTo('App\User', 'user_provider_id');
+        return $this->belongsTo('App\Company', 'company_provider_id');
     }
 }
